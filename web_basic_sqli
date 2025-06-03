@@ -1,0 +1,28 @@
+Challenge Description
+This challenge provides a simple web login form vulnerable to SQL Injection. The goal is to bypass authentication and retrieve the secret flag stored in the database.
+
+Step 1: Initial Reconnaissance
+Examined the login form by submitting normal and special inputs.
+
+Noticed the application returns generic error messages, indicating potential direct SQL queries with unsanitized inputs.
+
+Step 2: Testing SQL Injection Payloads
+Tested classic payloads like ' OR '1'='1 and ' OR 1=1 -- in username and password fields.
+
+Successfully bypassed authentication using ' OR 1=1 -- , allowing access without valid credentials.
+
+Step 3: Confirming Vulnerability
+Used Burp Suite to intercept and analyze HTTP requests.
+
+Verified that user input is directly embedded in SQL queries without proper parameterization or escaping, confirming the SQL Injection vulnerability.
+
+Step 4: Additional Testing
+Explored boolean-based SQL Injection to further understand the backend behavior.
+
+Tested blind SQL Injection techniques for potential exploitation in more restricted scenarios.
+
+Lessons Learned
+Importance of using prepared statements or parameterized queries to prevent SQL Injection.
+
+Practical experience in identifying and exploiting common web vulnerabilities using manual testing and tools like Burp Suite.
+
