@@ -1,0 +1,18 @@
+Challenge Description
+An authentication system vulnerable to logic flaws or injection, allowing bypassing login without valid credentials.
+
+Steps to Solve
+
+Tested common injection payloads like ' OR '1'='1 in login fields.
+
+Exploited weak session management by manipulating cookies or tokens.
+
+Gained access to restricted areas without valid user accounts.
+
+Lessons Learned
+
+Always use parameterized queries and secure session handling.
+
+Implement proper authentication checks on server side.
+
+Understand common bypass techniques in web auth systems.
