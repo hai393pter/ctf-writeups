@@ -1,0 +1,18 @@
+Challenge Description
+A web page accepts user input without proper sanitization and reflects it back in the HTML, allowing injection of malicious JavaScript code.
+
+Steps to Solve
+
+Tested input fields with common XSS payloads like <script>alert(1)</script>.
+
+Confirmed the script executed in the browser, indicating a reflected XSS vulnerability.
+
+Demonstrated the impact by stealing cookies or showing alert pop-ups.
+
+Lessons Learned
+
+Importance of input validation and output encoding to prevent XSS.
+
+Understanding the difference between stored and reflected XSS.
+
+Practical experience testing XSS using browser developer tools and intercepting proxies.
