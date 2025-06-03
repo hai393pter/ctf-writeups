@@ -1,0 +1,18 @@
+Challenge Description
+The web application allows uploading files but attempts to restrict dangerous file types. The goal is to bypass these restrictions and upload a malicious script.
+
+Steps to Solve
+
+Analyzed the file upload mechanism and filtering rules.
+
+Tested bypass techniques such as changing file extensions (e.g., .php5, .phtml), using double extensions (shell.php.jpg), or modifying MIME types.
+
+Successfully uploaded a webshell file and accessed it to execute commands on the server.
+
+Lessons Learned
+
+File extension and MIME type checks alone are insufficient for secure file uploads.
+
+Need for server-side validation and disabling script execution in upload directories.
+
+Awareness of various bypass methods for file upload filters.
